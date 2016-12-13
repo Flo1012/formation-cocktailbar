@@ -6,13 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Liste des ingrédients</title>
-<%-- <c:url value="/webjars/bootstrap/3.1.0/css/bootstrap.min.css" var="bootstrapUrl" /> --%>
-<%-- <link rel="stylesheet" href="${bootstrapUrl}"> --%>
+<c:url value="/webjars/bootstrap/3.1.0/css/bootstrap.min.css" var="bootstrapUrl" />
+<link rel="stylesheet" href="${bootstrapUrl}">
 </head>
 <body>
-<!-- 	<div class="container"> -->
+	<div class="container">
 		<h1>Liste des ingrédients :</h1>
-		<table>
+		<table class="table table-hover table-striped">
 			<thead>
 				<tr>
 					<th>Nom</th>
@@ -28,6 +28,6 @@
 				</c:forEach>
 			</tbody>
 		</table>
-<!-- 	</div> -->
+	</div>
 </body>
 </html>
