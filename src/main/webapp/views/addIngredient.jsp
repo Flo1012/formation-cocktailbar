@@ -5,30 +5,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Liste des ingrédients</title>
 <c:url value="/webjars/bootstrap/3.1.0/css/bootstrap.min.css" var="bootstrapUrl" />
 <link rel="stylesheet" href="${bootstrapUrl}">
 <link rel="stylesheet" href="<c:url value='/css/application.css' />">
+<title>Ajout d'un ingrédient</title>
 </head>
 <body>
+	<c:url value="/ingredients/add.html" var="addUrl" />
 	<div class="container">
-		<h1>Liste des ingrédients :</h1>
-		<table class="table table-hover table-striped">
-			<thead>
-				<tr>
-					<th>Nom</th>
-					<th>Etat</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${ingredients}" var="ingredient">
-					<tr>
-						<td>${ingredient.name}</td>
-						<td>${ingredient.etat}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+		<h1>Ajouter un ingrédient :</h1>
+		<form action="${addUrl}" method="POST">
+			<div class="form-group">
+				<label for="name">Nom :</label>
+				<input id="name" name="name" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="state">Etat :</label>
+				<input type="number" min="0" max="2" id="state" name="state" class="form-control" />
+			</div>
+			<button class="btn btn-default">Valider</button>
+		</form>
 	</div>
 	<div class="back">
 		<a href="<c:url value='/' />">Retour</a>

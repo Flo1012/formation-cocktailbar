@@ -8,6 +8,8 @@ public class Ingredient implements Serializable {
 
 	private int etat;
 
+	private Integer id;
+
 	private String name;
 
 	public Ingredient() {
@@ -44,6 +46,20 @@ public class Ingredient implements Serializable {
 	 */
 	public void setName(final String name) {
 		this.name = name;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }
