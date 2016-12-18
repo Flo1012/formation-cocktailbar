@@ -21,4 +21,20 @@
 			</basic>
 		</attributes>
 	</entity>
+	
+	<entity class="fr.formation.entity.Cocktail">
+		<table name="cocktail" />
+		<attributes>
+			<id name="id">
+				<column name="id" />
+				<generated-value strategy="IDENTITY" />
+			</id>
+			<basic name="name">
+				<column name="name" />
+			</basic>
+			<basic name="price">
+				<column name="price" />
+			</basic>
+		</attributes>
+	</entity>
 </entity-mappings>
